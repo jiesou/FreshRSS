@@ -15,7 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Refresh
+	env:
+        PASS: ${{ secrets.REFRESH_ACCOUNT_PASSWORD }}
         run: |
-          echo Start
-          curl 'http://freshrss-jiesou.herokuapp.com/p/i/?c=feed&a=actualize&force=1'
-          echo End
+          echo === Start
+	  curl -u jiesou:$PASS 'https://freshrss-jiesou.herokuapp.com/p/i/?c=feed&a=actualize'
+          echo === End
