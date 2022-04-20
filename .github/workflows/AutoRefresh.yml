@@ -19,5 +19,5 @@ jobs:
           PASS: ${{ secrets.REFRESH_ACCOUNT_PASSWORD }}
         run: |
           echo === Start
-          curl -u jiesou:$PASS 'https://freshrss-jiesou.herokuapp.com/p/i/?c=feed&a=actualize'
+          curl 'https://freshrss-jiesou.herokuapp.com/p/i/?c=feed&a=actualize&u=jiesou&p=$PASS'
           echo === End
