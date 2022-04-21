@@ -16,8 +16,9 @@ jobs:
     steps:
       - name: Refresh
         env:
-          PASS: ${{ secrets.REFRESH_ACCOUNT_PASSWORD }}
+          URL: ${{ secrets.REFRESH_URL }}
+          TOKEN: ${{ secrets.REFRESH_TOKEN }}
         run: |
           echo === Start
-          curl 'https://freshrss-jiesou.herokuapp.com/p/i/?c=feed&a=actualize&u=jiesou&p=$PASS'
+          curl $URL"/i/?c=feed&a=actualize&force=1&token="$TOKEN
           echo === End
