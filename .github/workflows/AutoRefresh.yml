@@ -20,5 +20,5 @@ jobs:
           TOKEN: ${{ secrets.REFRESH_TOKEN }}
         run: |
           echo === Start
-          curl $URL"/i/?c=feed&a=actualize&force=1&token="$TOKEN
+          curl $URL"i/?c=feed&a=actualize&force=1&token="$TOKEN
           echo === End
