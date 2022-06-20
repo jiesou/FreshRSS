@@ -10,8 +10,8 @@ return array (
   'meta_description' => '',
   'default_user' => 'jiesou',
   'force_email_validation' => false,
-  'allow_anonymous' => true,
-  'allow_anonymous_refresh' => true,
+  'allow_anonymous' => false,
+  'allow_anonymous_refresh' => false,
   'auth_type' => 'form',
   'http_auth_auto_register' => true,
   'http_auth_auto_register_email_field' => '',
@@ -64,7 +64,6 @@ return array (
   array (
     'Google-Groups' => false,
     'Tumblr-GDPR' => false,
-    'Auto Refresh' => true,
   ),
   'disable_update' => false,
 );

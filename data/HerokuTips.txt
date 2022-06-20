@@ -1,0 +1,6 @@
+heroku ps:exec
+zip -r output_file.zip data
+exit
+heroku ps:copy output_file.zip
+
+https://devcenter.heroku.com/articles/exec
